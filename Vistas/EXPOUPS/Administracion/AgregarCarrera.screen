@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Browser" id="1" x="78" y="56" width="851" height="641" text="Browser&#xA;http://ExpoUPS/AgregarCarreras" measuredWidth="851" measuredHeight="641">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="2" x="912" y="108" height="589" measuredWidth="17" measuredHeight="589"/>
+  <widgets xsi:type="model:Master" id="3" x="78" y="108" width="835" measuredWidth="835" measuredHeight="56">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#App%20Bar"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="6"/>
+      <widgets ref="2" width="835"/>
+      <widgets ref="3" x="799"/>
+      <widgets ref="5" text="Agregar Carreras"/>
+      <widgets ref="4" link="MenuCentral.screen"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="6" x="88" y="168" width="825" measuredWidth="825" measuredHeight="252">
+    <screen xsi:type="model:Screen" href="../assets/Android5/Templates/Form.screen#/"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="11"/>
+      <widgetChanges xsi:type="o:Delete" ref="10"/>
+      <widgetChanges xsi:type="o:Delete" ref="7"/>
+      <widgets ref="2" x="-187" y="-113" width="807"/>
+      <widgets ref="2/4" x="0" y="4"/>
+      <widgets ref="2/5" x="44" y="0"/>
+      <widgets ref="2/3" x="783" y="4"/>
+      <widgets ref="2">
+        <widgetChanges xsi:type="o:Delete" ref="/@widgets.0"/>
+      </widgets>
+      <widgets ref="3" x="-179" y="-53" width="817"/>
+      <widgets ref="3/44" width="817"/>
+      <widgets ref="4" x="-179" y="-5" width="817"/>
+      <widgets ref="4/44" width="817" text="Titulo"/>
+      <widgets ref="5" x="-179" y="43" width="817"/>
+      <widgets ref="5/44" width="817" text="Modalidad"/>
+      <widgets ref="8" x="-179" y="91" width="698"/>
+      <widgets ref="8/44" width="698" text="Ciclos"/>
+      <widgets ref="9" x="544" y="106" text="10 ciclos{desc}"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="8" x="280" y="600" measuredWidth="112" measuredHeight="36" link="Carreras.screen">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Raised"/>
+    <overrides>
+      <widgets ref="15" text="Agregar"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="9" x="582" y="600" measuredWidth="112" measuredHeight="36">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Raised"/>
+    <overrides>
+      <widgets ref="15" text="Cancelar"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="10" x="96" y="440" height="137" measuredWidth="801" measuredHeight="137">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Full%20Width%20Text%20Area"/>
+    <overrides>
+      <widgets ref="120" width="801" height="137" text="Descripcion"/>
+    </overrides>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

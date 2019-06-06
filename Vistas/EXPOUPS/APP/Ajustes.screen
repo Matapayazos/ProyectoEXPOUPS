@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Master" id="1" x="248" y="32" measuredWidth="456" measuredHeight="872">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Devices/Nexus%206.screen#Nexus%206"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="2" x="268" y="128" height="306" measuredWidth="409" measuredHeight="306">
+    <screen xsi:type="model:Screen" href="../assets/Android5/Templates/Form.screen#/"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Insert" newIndex="9">
+        <object xsi:type="model:Image" id="9" x="20" y="70"/>
+      </widgetChanges>
+      <widgetChanges xsi:type="o:Delete" ref="9"/>
+      <widgetChanges xsi:type="o:Delete" ref="8"/>
+      <widgets ref="2/2" width="409"/>
+      <widgets ref="2/5" x="35" text="Ajustes"/>
+      <widgets ref="2">
+        <widgetChanges xsi:type="o:Delete" ref="/@widgets.3"/>
+        <widgetChanges xsi:type="o:Delete" ref="/@widgets.1"/>
+      </widgets>
+      <widgets ref="3" x="141" width="268"/>
+      <widgets ref="3/44" width="268" text="Nombre"/>
+      <widgets ref="4/44" width="275"/>
+      <widgets ref="5/44" width="272" text="Telefono"/>
+      <widgets ref="7" x="323"/>
+      <widgets ref="10" y="226"/>
+      <widgets ref="10/57" width="272" text="Fecha"/>
+      <widgets ref="11" x="312" y="238" text="Cumpleaños"/>
+      <widgets ref="4" x="134" width="275"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="5" x="329" y="696" measuredWidth="112" measuredHeight="36" link="Principal.screen">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Raised"/>
+    <overrides>
+      <widgets ref="15" text="Guardar"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="6" x="520" y="696" measuredWidth="112" measuredHeight="36" link="Principal.screen">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Raised"/>
+    <overrides>
+      <widgets ref="15" text="Cancelar"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="8" x="279" y="416" measuredWidth="223" measuredHeight="48" layoutParams="anchor-left,anchor-right|anchor-top">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" width="223" text="Contrasen1a"/>
+    </overrides>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

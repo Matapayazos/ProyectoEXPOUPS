@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Master" id="1" x="223" y="72" measuredWidth="456" measuredHeight="872">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Devices/Nexus%206.screen#Nexus%206"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="2" x="247" y="584" measuredWidth="410" measuredHeight="254">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Devices/Nexus%206.screen#Nexus%206%20Keyboard"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="3" x="245" y="181" width="407" measuredWidth="407" measuredHeight="56">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#Search%20Toolbar"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="88"/>
+      <widgetChanges xsi:type="o:Delete" ref="82"/>
+      <widgets ref="80" width="407"/>
+      <widgets ref="86" text="Ayuda"/>
+      <widgets ref="81" link="Inicio.screen"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Tooltip" id="5" x="271" y="256" text="Bienvenido al sistema de ayuda de ExpoUPS, aqui " measuredWidth="296" measuredHeight="40">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Tooltip" id="7" x="333" y="295" text="Como puedo ver los diferentes procesos de admisión?" measuredWidth="318" measuredHeight="40" position="bottomRight">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="9" x="416" y="368" measuredWidth="40" measuredHeight="40">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Progress%20Bar%20Circular"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="11" x="245" y="537" width="292" measuredWidth="292" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" width="292" text="Tu pregunta aqui..."/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="12" x="545" y="543" measuredWidth="112" measuredHeight="36">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Raised"/>
+    <overrides>
+      <widgets ref="15" text="Enviar"/>
+    </overrides>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

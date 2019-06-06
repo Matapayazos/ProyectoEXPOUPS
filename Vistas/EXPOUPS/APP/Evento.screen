@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Master" id="1" x="176" y="16" measuredWidth="456" measuredHeight="872">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Devices/Nexus%206.screen#Nexus%206"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="2" x="196" y="119" measuredWidth="407" measuredHeight="56">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#Search%20Toolbar"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="88"/>
+      <widgetChanges xsi:type="o:Delete" ref="82"/>
+      <widgets ref="80" width="407"/>
+      <widgets ref="86" text="Evento"/>
+      <widgets ref="81" link="MenuPrincipal.screen"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:CoverFlow" id="8" x="206" y="174" width="401" height="159" measuredWidth="401" measuredHeight="159"/>
+  <widgets xsi:type="model:Master" id="9" x="216" y="536" height="97" measuredWidth="200" measuredHeight="97">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Full%20Width%20Text%20Area"/>
+    <overrides>
+      <widgets ref="120" height="97" text="Descripcion del evento "/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="10" x="216" y="371" measuredWidth="142" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="Nombre del Evento"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="11" x="216" y="428" measuredWidth="99" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="Fecha y Hora"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="12" x="216" y="489" measuredWidth="45" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="Lugar"/>
+    </overrides>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
