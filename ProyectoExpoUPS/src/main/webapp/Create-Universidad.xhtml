@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<f:metadata>
+		<f:viewParam id="id" name="id" value="#{universidadBean.id}" />
+		<f:viewAction action="#{universidadBean.loadData()}" />
+	</f:metadata>
+</h:head>
+
+<ui:composition template="blank.xhtml">
+	<ui:define name="titulo">
+		<br />
+		<h2>Manejo de Universidads</h2>
+		<br />
+	</ui:define>
+
+	<ui:define name="contenido">
+
+		<div class="box box-info">
+			<h:form class="form-horizontal">
+				<!-- Inicio /.box-body -->
+				<div class="box-body">
+
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Datos
+							Universidad</label>
+						<div class="col-sm-10">
+							<h:inputHidden value="#{universidadBean.newUniversidad.id}"
+								id="txtcode" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Nombre</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{universidadBean.newUniversidad.nombre}"
+								id="txtNombre" class="form-control" />
+							<h:message for="txtNombre" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Sede</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{universidadBean.newUniversidad.sede}"
+								id="txtSede" class="form-control" />
+							<h:message for="txtSede" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Dirección]</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{universidadBean.newUniversidad.direccion}"
+								id="txtDireccion" class="form-control" />
+							<h:message for="txtDireccion" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Teléfono</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{universidadBean.newUniversidad.telefono}"
+								id="txtTelefono" class="form-control" />
+							<h:message for="txtTelefono" />
+						</div>
+					</div>
+
+
+
+				</div>
+				<!-- Fin /.box-body -->
+				<div class="box-footer">
+
+					<h:inputHidden value="#{universidadBean.editing}" />
+
+					<h:commandButton action="#{universidadBean.guardar()}"
+						value="Guardar" class="btn btn-info pull-right" />
+
+					<h:commandButton action="index?faces-redirect=true" value="Salir"
+						immediate="true" class="btn btn-default" />
+
+				</div>
+				<!-- /.box-footer -->
+
+				<div class="box-body pad">
+
+					<h:dataTable var="_universidad"
+						value="#{universidadBean.universidads}" border="2"
+						class="table table-bordered text-center">
+
+						<h:column>
+							<f:facet name="header">Codigo</f:facet>
+			                #{_universidad.id}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Nombre</f:facet>
+			                #{_universidad.nombre}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Sede</f:facet>
+			                #{_universidad.sede}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Dirección</f:facet>
+			                #{_universidad.direccion}
+			     		</h:column>
+
+						<h:column>
+							<f:facet name="header">Teléfono</f:facet>
+			               #{_universidad.telefono}
+			            </h:column>					
+
+						<h:column>
+							<f:facet name="header">Acciones</f:facet>
+							<h:commandButton
+								action="#{universidadBean.borrar(_universidad.id)}"
+								value="Borrar" immediate="true" class="btn btn-default" />
+							<h:commandButton action="#{universidadBean.editar(_universidad)}"
+								value="Editar" immediate="true" class="btn btn-info pull-right" />
+						</h:column>
+
+					</h:dataTable>
+				</div>
+
+			</h:form>
+		</div>
+
+	</ui:define>
+</ui:composition>
+
+</html>

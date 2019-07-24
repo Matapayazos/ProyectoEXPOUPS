@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>ups.edu.ec blank</title>
+	<!-- Tell the browser to be responsive to screen width -->
+	<meta
+		content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+		name="viewport" />
+	<!-- Bootstrap 3.3.7 -->
+	<link rel="stylesheet"
+		href="resources/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<!-- Font Awesome -->
+	<link rel="stylesheet"
+		href="resources/bower_components/font-awesome/css/font-awesome.min.css" />
+	<!-- Ionicons -->
+	<link rel="stylesheet"
+		href="resources/bower_components/Ionicons/css/ionicons.min.css" />
+	<!-- Theme style -->
+	<link rel="stylesheet" href="resources/dist/css/AdminLTE.min.css" />
+	<!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+	<link rel="stylesheet"
+		href="resources/dist/css/skins/_all-skins.min.css" />
+	<!-- Google Font -->
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
+</h:head>
+
+   <h:body class="hold-transition skin-blue sidebar-mini">
+	<!-- Site wrapper -->
+	<div class="wrapper">
+
+		<header class="main-header">
+			<!-- Logo -->
+			<a href="index.xhtml" class="logo"> <!-- mini logo for sidebar mini 50x50 pixels -->
+				<span class="logo-mini"><b>UPS</b></span> <!-- logo for regular state and mobile devices -->
+				<span class="logo-lg"><b>UPS</b>.edu.ec</span>
+			</a>
+			<!-- Header Navbar: style can be found in header.less -->
+			<nav class="navbar navbar-static-top">
+				<!-- Sidebar toggle button-->
+				<a href="#" class="sidebar-toggle" data-toggle="push-menu"
+					role="button"> <span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span>
+				</a>
+
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+
+						<!-- User Account: style can be found in dropdown.less -->
+						<li class="dropdown user user-menu"><a href="#"
+							class="dropdown-toggle" data-toggle="dropdown"> <img
+								src="resources/dist/img/user2-160x160.png" class="user-image"
+								alt="User Image" /> <span class="hidden-xs">UPS.edu.ec</span>
+						</a>
+							<ul class="dropdown-menu">
+								<!-- User image -->
+								<li class="user-header"><img
+									src="resources/dist/img/user2-160x160.png" class="img-circle"
+									alt="User Image" />
+
+									<p>
+										UPS.edu.ec <small>Educar con el corazón</small>
+									</p></li>
+							</ul></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+
+
+		<!-- Left side column. contains the sidebar -->
+		<aside class="main-sidebar">
+			<!-- sidebar: style can be found in sidebar.less -->
+			<section class="sidebar">
+				<!-- Sidebar user panel -->
+				<div class="user-panel">
+					<div class="pull-left image">
+						<img src="resources/dist/img/user2-160x160.png" class="img-circle"
+							alt="User Image" />
+					</div>
+					<div class="pull-left info">
+						<p>Educar con el corazón</p>
+					</div>
+				</div>
+				<!-- /.search form -->
+				<!-- sidebar menu: : style can be found in sidebar.less -->
+				<ul class="sidebar-menu" data-widget="tree">
+
+					<li class="header">MENU PRINCIPAL</li>
+
+					<li><a href="Create-Universidad.xhtml?faces-redirect=true"><i
+							class="fa fa-book"></i> <span>Universidades</span></a></li>
+
+					<li><a href="Create-Carrera.xhtml?faces-redirect=true"><i
+							class="fa fa-book"></i> <span>Carreras</span></a></li>
+
+					<li><a href="Create-Aspirante.xhtml?faces-redirect=true"><i
+							class="fa fa-book"></i> <span>Aspirantes</span></a></li>
+
+					<li><a href="Create-Evento.xhtml?faces-redirect=true"><i
+							class="fa fa-book"></i> <span>Eventos</span></a></li>
+
+
+
+					<li><a href="Create-Cliente.xhtml?faces-redirect=true"><i
+							class="fa fa-book"></i> <span>Other</span></a></li>
+
+					<li><a href="Create-Carro.xhtml?faces-redirect=true"><i
+							class="fa fa-book"></i> <span>Other</span></a></li>
+
+
+					<li><a href="List-RegistroApp.xhtml?faces-redirect=true"><i
+							class="fa fa-book"></i> <span>Actividad App Movil</span></a></li>
+
+				</ul>
+			</section>
+			<!-- /.sidebar -->
+		</aside>
+
+		<!-- =============================================== -->
+
+
+
+
+
+		<!-- Content Wrapper. Contains page content -->
+		<div class="content-wrapper">
+
+			<!-- Main content -->
+			<section class="content">
+
+				<!-- Default box -->
+				<div class="box">
+					<div class="box-header with-border">
+						<h3 class="box-title">
+							<ui:insert name="titulo">Titulo</ui:insert>
+						</h3>
+
+						<div class="box-tools pull-right">
+							<button type="button" class="btn btn-box-tool"
+								data-widget="collapse" data-toggle="tooltip" title="Collapse">
+								<i class="fa fa-minus"></i>
+							</button>
+							<button type="button" class="btn btn-box-tool"
+								data-widget="remove" data-toggle="tooltip" title="Remove">
+								<i class="fa fa-times"></i>
+							</button>
+						</div>
+					</div>
+
+					<div class="box-body">
+						<ui:insert name="contenido">
+	        	Aqui se incluira el contenido 
+	        </ui:insert>
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</section>
+			<!-- /.content -->
+		</div>
+		<!-- /.content-wrapper -->
+
+		<footer class="main-footer">
+			<strong>UPS.edu.ec </strong> Educar con el corazón
+		</footer>
+	</div>
+	<!-- ./wrapper -->
+
+	<!-- jQuery 3 -->
+	<script src="resources/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script
+		src="resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- SlimScroll -->
+	<script
+		src="resources/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<!-- FastClick -->
+	<script src="resources/bower_components/fastclick/lib/fastclick.js"></script>
+	<!-- AdminLTE App -->
+	<script src="resources/dist/js/adminlte.min.js"></script>
+	<!-- AdminLTE for demo purposes -->
+	<script src="resources/dist/js/demo.js"></script>
+	<script>
+  $(document).ready(function () {
+    $('.sidebar-menu').tree()
+  })
+</script>
+</h:body>
+</html>

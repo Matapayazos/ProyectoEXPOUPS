@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="blank.xhtml">
+	<ui:define name="titulo">
+		<h2>Registros de actividad de la Aplicacion Movil</h2>
+	</ui:define>
+
+	<ui:define name="contenido">
+
+		<h:form class="form-horizontal">
+
+			<div class="form-group">
+				<label for="inputEmail3" class="col-sm-2 control-label">Seleccionar
+					Persona</label>
+				<div class="col-sm-10">
+					<h:selectOneMenu value="#{registroAppBean.idCliente}" id="pb"
+						class="form-control">
+						<f:selectItems value="#{registroAppBean.listaClientesCbx}" />
+					</h:selectOneMenu>
+					<h:message for="pb" />
+				</div>
+				<div>
+					<h:commandButton action="#{registroAppBean.cargarRegistrosPorPersona()}"
+						value="Consultar por Persona" class="btn btn-default" />
+				</div>
+
+				<div>
+					<h:commandButton action="#{registroAppBean.listaRegistrosApp()}"
+						value="Mostrar Todos" class="btn btn-info pull-right" />
+				</div>
+			</div>
+
+
+		</h:form>
+
+
+		<div class="box box-info">
+
+			<h:form class="form-horizontal">
+
+				<div class="box-body pad">
+
+					<h:dataTable var="_registro"
+						value="#{registroAppBean.listaRegistrosApp}" border="1"
+						class="table table-bordered text-center">
+
+						<h:column>
+							<f:facet name="header">Código</f:facet>
+			                #{_registro.id}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Fecha</f:facet>
+			                #{_registro.fecha}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Actividad</f:facet>
+			                #{_registro.actividad}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Detalles</f:facet>
+							<h:commandButton action="#{registroAppBean.loadData()}"
+								value="Ver Detalles" class="btn btn-info pull-right" />
+						</h:column>
+
+					</h:dataTable>
+				</div>
+
+				<div class="box-footer">
+
+					<h:commandButton action="index?faces-redirect=true" value="Salir"
+						class="btn btn-default" />
+
+					<h:commandButton action="Create-Factura?faces-redirect=true"
+						value="Regresar" class="btn btn-info pull-right" />
+
+				</div>
+				<!-- /.box-footer -->
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
+
+</html>

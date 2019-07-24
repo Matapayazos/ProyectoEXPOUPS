@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Red auto.com</title>
+<!-- Tell the browser to be responsive to screen width -->
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport" />
+<!-- Bootstrap 3.3.7 -->
+
+<link rel="stylesheet"
+	href="resources/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+	href="resources/bower_components/font-awesome/css/font-awesome.min.css" />
+<!-- Ionicons -->
+<link rel="stylesheet"
+	href="resources/bower_components/Ionicons/css/ionicons.min.css" />
+<!-- Theme style -->
+<link rel="stylesheet" href="resources/dist/css/AdminLTE.min.css" />
+<!-- iCheck -->
+<link rel="stylesheet" href="resources/plugins/iCheck/square/blue.css" />
+<!-- Google Font -->
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic" />
+
+</head>
+<body class="hold-transition login-page">
+	<div class="login-box">
+		<div class="login-logo">
+			<b>Red</b>auto.com
+		</div>
+		<!-- /.login-logo -->
+		<div class="login-box-body">
+
+			<p class="login-box-msg">Si no dispone de sus credenciales
+				contacte con el Administrador</p>
+
+
+			<div class="box box-info">
+				<div class="box-header with-border">
+					<h3 class="box-title">El usuario ó la contraseña son
+						incorrectos</h3>
+				</div>
+				<h:form class="form-horizontal">
+
+					<div class="box-footer">
+
+						<h:commandButton action="index?faces-redirect=true"
+							value="Reintentar" class="btn btn-default" />
+
+						<h:commandButton action="index?faces-redirect=true" value="Salir"
+							class="btn btn-info pull-right" />
+
+					</div>
+					<!-- /.box-footer -->
+				</h:form>
+			</div>
+
+
+
+		</div>
+		<!-- /.login-box-body -->
+	</div>
+	<!-- /.login-box -->
+
+	<!-- jQuery 3 -->
+	<script src="resources/bower_components/jquery/dist/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script
+		src="resources/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- iCheck -->
+	<script src="resources/plugins/iCheck/icheck.min.js"></script>
+	<script>
+			  $(function () {
+			    $('input').iCheck({
+			      checkboxClass: 'icheckbox_square-blue',
+			      radioClass: 'iradio_square-blue',
+			      increaseArea: '20%' /* optional */
+			    });
+			  });
+		</script>
+</body>
+</html>

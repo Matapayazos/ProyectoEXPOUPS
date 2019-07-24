@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:metadata>
+		<f:viewParam id="id" name="id" value="#{eventoBean.id}" />
+		<f:viewAction action="#{eventoBean.loadData()}" />
+	</f:metadata>
+</h:head>
+
+<ui:composition template="blank.xhtml">
+	<ui:define name="titulo">
+		<h2>Manejo de Eventos</h2>
+	</ui:define>
+
+	<ui:define name="contenido">
+
+		<div class="box box-info">
+			<h:form class="form-horizontal">
+				<!-- Inicio /.box-body -->
+				<div class="box-body">
+
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Seleccionar
+							Carrera</label>
+						<div class="col-sm-10">
+							<h:selectOneMenu value="#{eventoBean.idCarrera}" id="pb"
+								class="form-control">
+								<f:selectItems value="#{eventoBean.listaCarrerasCbx}" />
+							</h:selectOneMenu>
+							<h:message for="pb" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Datos
+							Evento</label>
+						<div class="col-sm-10">
+							<h:inputHidden value="#{eventoBean.newEvento.id}" id="txtcode" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Nombre</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{eventoBean.newEvento.nombre}"
+								id="txtNombre" class="form-control" />
+							<h:message for="txtNombre" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Descripción</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{eventoBean.newEvento.descripcion}"
+								id="txtDescripcion" class="form-control" />
+							<h:message for="txtDescripcion" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Ubicación</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{eventoBean.newEvento.ubicacion}"
+								id="txtUbicacion" class="form-control" />
+							<h:message for="txtUbicacion" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<h:outputLabel for="fechaInicio" class="control-label col-sm-4">Fecha Inicio</h:outputLabel>
+						<div class="col-sm-4">
+						
+						<p:calendar id="popup" value="#{eventoBean.newEvento.fecha}" showOn="button"  />
+         
+							
+							<h:message for="fechaInicio" />
+						</div>
+					</div>
+
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Hora</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{eventoBean.newEvento.hora}" id="txtHora"
+								class="form-control" />
+							<h:message for="txtHora" />
+						</div>
+					</div>
+
+
+
+				</div>
+
+				<div class="box-footer">
+					<h:inputHidden value="#{eventoBean.edit}" />
+					<h:commandButton action="#{eventoBean.guardar()}" value="Guardar"
+						class="btn btn-info pull-right" />
+
+					<h:commandButton action="index?faces-redirect=true" value="Salir"
+						immediate="true" class="btn btn-default" />
+				</div>
+				<!-- /.box-footer -->
+
+				<div class="box-body pad">
+
+					<h:dataTable var="_evento" value="#{eventoBean.eventos}" border="1"
+						class="table table-bordered text-center">
+
+						<h:column>
+							<f:facet name="header">Codigo</f:facet>
+				                #{_evento.id}
+				      	</h:column>
+
+						<h:column>
+							<f:facet name="header">Nombre</f:facet>
+				                #{_evento.nombre}
+				      	</h:column>
+
+						<h:column>
+							<f:facet name="header">Descripción</f:facet>
+				                #{_evento.descripcion}
+				      	</h:column>
+
+						<h:column>
+							<f:facet name="header">Ubicación</f:facet>
+				                #{_evento.ubicacion}
+				     	</h:column>
+
+						<h:column>
+							<f:facet name="header">Fecha</f:facet>
+			               #{_evento.fecha}
+			            </h:column>
+
+						<h:column>
+							<f:facet name="header">Hora</f:facet>
+			               #{_evento.hora}
+			            </h:column>
+
+						<h:column>
+							<f:facet name="header">Acciones</f:facet>
+							<h:commandButton action="#{eventoBean.borrar(_evento.id)}"
+								value="Borrar" immediate="true" class="btn btn-default" />
+							<h:commandButton action="#{eventoBean.editar(_evento)}"
+								value="Editar" immediate="true" class="btn btn-info pull-right" />
+						</h:column>
+
+					</h:dataTable>
+				</div>
+
+			</h:form>
+		</div>
+
+	</ui:define>
+</ui:composition>
+
+</html>

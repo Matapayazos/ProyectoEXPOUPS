@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="blank.xhtml">
+	<ui:define name="titulo">
+		<h2>Factura</h2>
+	</ui:define>
+
+	<ui:define name="contenido">
+
+		<div class="box box-info">
+			<h:form class="form-horizontal">
+				<!-- Inicio /.box-body -->
+				<div class="box-body">
+
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Seleccione
+							un Cliente</label>
+						<div class="col-sm-10">
+							<h:selectOneMenu value="#{facturaCabeceraBean.idCliente}" id="pb"
+								class="form-control">
+								<f:selectItems value="#{facturaCabeceraBean.listaClientesCbx}" />
+							</h:selectOneMenu>
+							<h:message for="pb" />
+						</div>
+					</div>
+
+
+
+
+					<div class="form-group">
+						<div class="col-sm-10">
+							<h:commandButton action="Create-Cliente?faces-redirect=true"
+								value=" Nuevo Cliente " immediate="true" class="btn btn-default" />
+						</div>
+					</div>
+
+					<h3>Detalle Factura</h3>
+					<div class="box-body pad">
+
+						<h:dataTable var="_factura"
+							value="#{facturaCabeceraBean.newFacturaCabecera.listaFacDetalles}"
+							border="1" class="table table-bordered text-center">
+
+							<h:column>
+								<f:facet name="header">Cantidad</f:facet>
+				                #{_factura.cantidad}
+				      		</h:column>
+
+							<h:column>
+								<f:facet name="header">Placa</f:facet>
+				                #{_factura.carro.placa}
+				      		</h:column>
+
+							<h:column>
+								<f:facet name="header">Marca</f:facet>
+				                #{_factura.carro.marca}
+				      		</h:column>
+
+							<h:column>
+								<f:facet name="header">Modelo</f:facet>
+				                #{_factura.carro.modelo}
+				      		</h:column>
+
+							<h:column>
+								<f:facet name="header">Precio Unitario</f:facet>
+				                #{_factura.subtotal}
+				      		</h:column>
+
+							<h:column>
+								<f:facet name="header">Subtotal</f:facet>
+				                #{_factura.subtotal}
+				      		</h:column>
+						</h:dataTable>
+					</div>
+
+
+				</div>
+				<!-- Fin /.box-body -->
+				<div class="box-footer">
+
+					<h:commandButton action="index?faces-redirect=true" value="Salir"
+						class="btn btn-default" />
+
+					<h:commandButton action="#{facturaCabeceraBean.Facturar()}"
+						value="Facturar" class="btn btn-info pull-right" />
+
+					<h:commandButton action="List-Facturas" value="Revisar Facturas"
+						class="btn btn-info pull-right" />
+				</div>
+				<!-- /.box-footer -->
+
+				<div class="box-body pad">
+					<h3>Carros No Facturados</h3>
+
+					<h:dataTable var="_carro" value="#{carroBean.carrosPorFacturar()}"
+						border="1" class="table table-bordered text-center">
+
+						<h:column>
+							<f:facet name="header">Código</f:facet>
+			                #{_carro.id}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Placa</f:facet>
+			                #{_carro.placa}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Marca</f:facet>
+			                #{_carro.marca}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Modelo</f:facet>
+			                #{_carro.modelo}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Precio</f:facet>
+			               #{_carro.precio}
+			            </h:column>
+
+						<h:column>
+							<f:facet name="header">Acciones</f:facet>
+							<h:commandButton
+								action="#{facturaCabeceraBean.addDetalle(_carro)}"
+								value="Añadir a la Factura" class="btn btn-info pull-right" />
+						</h:column>
+
+					</h:dataTable>
+				</div>
+
+			</h:form>
+		</div>
+
+	</ui:define>
+</ui:composition>
+
+</html>

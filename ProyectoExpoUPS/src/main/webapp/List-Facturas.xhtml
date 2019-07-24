@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition template="blank.xhtml">
+	<ui:define name="titulo">
+		<br />
+		<br />
+		<h2>Lista de Facturas</h2>
+		<br />
+		<br />
+	</ui:define>
+
+	<ui:define name="contenido">
+		<div class="box box-info">
+
+			<h:form class="form-horizontal">
+
+				<div class="box-body pad">
+					<h:dataTable var="_factura"
+						value="#{facturaCabeceraBean.facturasCabecera}" border="3"
+						class="table table-bordered text-center">
+
+						<h:column>
+							<f:facet name="header">Fecha</f:facet>
+			                #{_factura.fecha}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Cedula</f:facet>
+			                #{_factura.cliente.numeroIdentificacion}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Cliente</f:facet>
+			                #{_factura.cliente.nombre}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Apellido</f:facet>
+			                #{_factura.cliente.apellido}
+			      		</h:column>
+						<h:column>
+							<f:facet name="header">Subtotal</f:facet>
+			                #{_factura.sumaSubtotales}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">IVA</f:facet>
+			                #{_factura.iva}
+			      		</h:column>
+
+						<h:column>
+							<f:facet name="header">Total</f:facet>
+			                #{_factura.total}
+			      		</h:column>
+
+					</h:dataTable>
+				</div>
+
+				<div class="box-footer">
+
+					<h:commandButton action="index?faces-redirect=true" value="Salir"
+						class="btn btn-default" />
+
+					<h:commandButton
+						action="Create-Factura?faces-redirect=true"
+						value="Regresar" class="btn btn-info pull-right" />
+
+				</div>
+				<!-- /.box-footer -->
+			</h:form>
+		</div>
+	</ui:define>
+</ui:composition>
+
+</html>
