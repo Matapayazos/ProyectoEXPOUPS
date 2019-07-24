@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Master" id="1" x="176" y="16" measuredWidth="456" measuredHeight="872">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Devices/Nexus%206.screen#Nexus%206"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="3" x="196" y="119" measuredWidth="407" measuredHeight="56">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#Search%20Toolbar"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="88"/>
+      <widgetChanges xsi:type="o:Delete" ref="82"/>
+      <widgets ref="80" width="407"/>
+      <widgets ref="86" text="Resultado"/>
+      <widgets ref="81" link="MenuPrincipal.screen"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Group" id="5" x="207" y="192" width="386" height="537" text="Resutado" measuredWidth="386" measuredHeight="537">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="12" x="232" y="247" measuredWidth="190" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Felicidades tu puntaje es de "/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="13" x="432" y="244" measuredWidth="40" measuredHeight="29">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Text%20Medium"/>
+    <overrides>
+      <widgets ref="4" text="120"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="14" x="221" y="280" measuredWidth="366" measuredHeight="68">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Paragraph"/>
+    <overrides>
+      <widgets ref="13" width="366" text="Basado en nuestro test la carreras que te recomendamos es:&#xA;* Administracion de Empresas&#xA;* Contabilidad &#xA;*  Ingenieria en Marketing "/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="15" x="328" y="480" measuredWidth="161" measuredHeight="36" link="Principal.screen">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Raised"/>
+    <overrides>
+      <widgets ref="15" width="161" text="Recibir Notificaciones"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="16" x="224" y="584" measuredWidth="360" measuredHeight="118">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#Bottom%20Sheet%20Icons"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="143"/>
+      <widgetChanges xsi:type="o:Delete" ref="142"/>
+      <widgetChanges xsi:type="o:Delete" ref="141"/>
+      <widgetChanges xsi:type="o:Delete" ref="140"/>
+      <widgetChanges xsi:type="o:Delete" ref="139"/>
+      <widgetChanges xsi:type="o:Delete" ref="138"/>
+      <widgets ref="137" height="118"/>
+      <widgets ref="144" y="26"/>
+      <widgets ref="145" y="26"/>
+      <widgets ref="146" y="26"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="17" x="361" y="541" measuredWidth="72" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Compartir"/>
+    </overrides>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

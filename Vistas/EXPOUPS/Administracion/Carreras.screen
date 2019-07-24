@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Browser" id="1" x="78" y="56" width="851" height="641" text="Browser&#xA;http://ExpoUPS/Carreras" measuredWidth="851" measuredHeight="641">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="2" x="912" y="108" height="589" measuredWidth="17" measuredHeight="589"/>
+  <widgets xsi:type="model:Master" id="4" x="78" y="108" width="835" measuredWidth="835" measuredHeight="56">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#App%20Bar"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="6"/>
+      <widgets ref="2" width="835"/>
+      <widgets ref="3" x="799"/>
+      <widgets ref="5" text="Administración de carreras"/>
+      <widgets ref="4" link="MenuCentral.screen"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Table" id="8" x="78" y="163" width="835" height="534" text="Nombre ,Titulo,Modalidad, Ciclos,Descripcion,Acciones&#xA;Administracion de Empresas,Licenciado en Administracion de empresas,Presencial,9 ciclos,Descripcion parcial ,[Editar] [Eliminar]&#xA;" measuredWidth="835" measuredHeight="534" alternative="#eee">
+    <font/>
+    <items x="736" y="24" width="34" height="15" text="Editar"/>
+    <items x="772" y="24" width="46" height="15" text="Eliminar"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="9" x="832" y="616" measuredWidth="58" measuredHeight="58" link="AgregarCarrera.screen">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Floating"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

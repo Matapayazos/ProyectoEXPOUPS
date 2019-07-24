@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Master" id="1" x="184" y="16" measuredWidth="456" measuredHeight="872">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Devices/Nexus%206.screen#Nexus%206"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="2" x="206" y="117" measuredWidth="407" measuredHeight="56">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#Search%20Toolbar"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="88"/>
+      <widgetChanges xsi:type="o:Delete" ref="82"/>
+      <widgets ref="80" width="407"/>
+      <widgets ref="86" text="Ingenieria de Sistemas"/>
+      <widgets ref="81" link="MenuPrincipal.screen"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:SVGImage" id="3" x="432" y="192" measuredWidth="150" measuredHeight="150"/>
+  <widgets xsi:type="model:Master" id="4" x="242" y="200" measuredWidth="44" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Titulo"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="5" x="242" y="240" measuredWidth="74" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Modalidad"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="6" x="242" y="288" measuredWidth="46" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Ciclos"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="8" x="233" y="392" height="313" measuredWidth="344" measuredHeight="313">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Full%20Width%20Text%20Area"/>
+    <overrides>
+      <widgets ref="120" width="344" height="313"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="11" x="354" y="728" measuredWidth="112" measuredHeight="36" link="Principal.screen">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Raised"/>
+    <overrides>
+      <widgets ref="15" text="Recibir Noticias"/>
+    </overrides>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

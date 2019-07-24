@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Master" id="1" x="176" y="16" measuredWidth="456" measuredHeight="872">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Devices/Nexus%206.screen#Nexus%206"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Insert" newIndex="4">
+        <object xsi:type="model:TextField" id="4" x="242" y="176" text="0">
+          <font/>
+        </object>
+      </widgetChanges>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="2" x="206" y="117" measuredWidth="407" measuredHeight="56">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#Search%20Toolbar"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="88"/>
+      <widgetChanges xsi:type="o:Delete" ref="82"/>
+      <widgets ref="80" width="407"/>
+      <widgets ref="86" text="Test de Aptitudes"/>
+      <widgets ref="81" link="MenuPrincipal.screen"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="3" x="296" y="192" measuredWidth="106" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Total de Puntos"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Group" id="6" x="207" y="224" width="386" height="505" text="Pregunta" measuredWidth="386" measuredHeight="505">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Image" id="7" x="337" y="336" measuredWidth="100" measuredHeight="100"/>
+  <widgets xsi:type="model:Master" id="8" x="301" y="296" measuredWidth="171" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Basados en ..................?"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="9" x="232" y="560" text="A" measuredWidth="30" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="10" x="348" y="560" text="B" measuredWidth="29" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="11" x="480" y="560" text="C" measuredWidth="30" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="12" x="496" y="672" text="Siguiente" measuredWidth="73" measuredHeight="25" link="Resultados.screen">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

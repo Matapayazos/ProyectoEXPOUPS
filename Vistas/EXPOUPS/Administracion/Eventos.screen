@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore" xmlns:o="http://wireframesketcher.com/1.0/model/overrides">
+  <widgets xsi:type="model:Browser" id="1" x="78" y="56" width="851" height="641" text="Browser&#xA;http://ExpoUPS/Eventos" measuredWidth="851" measuredHeight="641">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="2" x="912" y="108" height="589" measuredWidth="17" measuredHeight="589"/>
+  <widgets xsi:type="model:Master" id="4" x="78" y="108" width="835" measuredWidth="835" measuredHeight="56">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#App%20Bar"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="6"/>
+      <widgets ref="2" width="835"/>
+      <widgets ref="3" x="799"/>
+      <widgets ref="5" text="Administración de Eventos"/>
+      <widgets ref="4" link="MenuCentral.screen"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="15" x="103" y="179" measuredWidth="65" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Inactivos"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="16" x="536" y="179" measuredWidth="55" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Activos"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:VLine" id="18" x="488" y="163" height="534" measuredWidth="6" measuredHeight="534"/>
+  <widgets xsi:type="model:Browser" id="27" x="78" y="736" width="851" height="641" text="Browser&#xA;http://ExpoUPS/Eventos" measuredWidth="851" measuredHeight="641">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:VScrollbar" id="28" x="912" y="788" height="589" measuredWidth="17" measuredHeight="589"/>
+  <widgets xsi:type="model:Master" id="29" x="78" y="788" measuredWidth="835" measuredHeight="56">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Navigation.screen#App%20Bar"/>
+    <overrides>
+      <widgetChanges xsi:type="o:Delete" ref="6"/>
+      <widgets ref="2" width="835"/>
+      <widgets ref="3" x="799"/>
+      <widgets ref="5" text="Administración de Eventos"/>
+      <widgets ref="4" link="MenuCentral.screen"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="30" x="103" y="859" measuredWidth="65" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Antiguos"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="31" x="94" y="1008" measuredWidth="63" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Actuales"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="41" x="92" y="1200" measuredWidth="67" measuredHeight="24">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Typography.screen#Header"/>
+    <overrides>
+      <widgets ref="15" text="Proximos"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="42" x="78" y="984" measuredWidth="835" measuredHeight="6">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Lists.screen#List%20Divider"/>
+    <overrides>
+      <widgets ref="149" width="835"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="43" x="78" y="1184" measuredWidth="835" measuredHeight="6">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Lists.screen#List%20Divider"/>
+    <overrides>
+      <widgets ref="149" width="835"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="49" x="835" y="1287" measuredWidth="58" measuredHeight="58" link="AgregarEventos.screen">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Floating"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="50" x="843" y="615" measuredWidth="58" measuredHeight="58" link="AgregarEventos.screen">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Button%20Floating"/>
+  </widgets>
+  <widgets xsi:type="model:Master" id="51" x="117" y="211" width="188" measuredWidth="188" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" width="188" text="Inscripciones periodo 24"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="52" x="117" y="271" measuredWidth="66" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="RETHOS"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="53" x="119" y="336" measuredWidth="190" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="Taller de Neuro Marketing"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="54" x="119" y="406" measuredWidth="186" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="Concurso Internacional V"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="55" x="116" y="882" measuredWidth="190" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="Taller de Neuro Marketing"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="56" x="116" y="929" measuredWidth="186" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="Concurso Internacional V"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="57" x="115" y="1040" measuredWidth="188" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" width="188" text="Inscripciones periodo 24"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="58" x="115" y="1100" measuredWidth="66" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="RETHOS"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="59" x="531" y="211" measuredWidth="71" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="ExpoUPS"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="60" x="531" y="271" measuredWidth="152" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="Partido Intercarreras"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="61" x="114" y="1240" measuredWidth="71" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="ExpoUPS"/>
+    </overrides>
+  </widgets>
+  <widgets xsi:type="model:Master" id="62" x="114" y="1300" measuredWidth="152" measuredHeight="48">
+    <screen xsi:type="model:WidgetGroup" href="../assets/Android5/Controls.screen#Text%20Field"/>
+    <overrides>
+      <widgets ref="44" text="Partido Intercarreras"/>
+    </overrides>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
