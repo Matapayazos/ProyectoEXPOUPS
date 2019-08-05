@@ -14,20 +14,12 @@ import ec.edu.ups.dao.CarreraDAO;
 import ec.edu.ups.dao.CarreraDAO;
 import ec.edu.ups.model.Carrera;
 import ec.edu.ups.model.Carrera;
-import ec.edu.ups.model.Cliente;
-import ec.edu.ups.model.RegistroApp;
 
 @Stateless
 public class CarreraBussiness {
 	
 	@Inject
 	private CarreraDAO dao;
-
-	@Inject
-	private ClienteBussiness bCliente;
-
-	@Inject
-	private RegistroAppBussiness registroAppBussiness;
 
 	public boolean save(Carrera carrera) throws Exception {
 		Carrera aux = dao.read(carrera.getId());
@@ -40,18 +32,6 @@ public class CarreraBussiness {
 
 	public List<Carrera> getCarreras() {
 		return dao.getCarreras();
-	}
-
-	public List<RegistroApp> getComentarios() {
-		List<RegistroApp> auxLista = new ArrayList<RegistroApp>();
-		
-		for (RegistroApp r : registroAppBussiness.getRegistroApps()) {
-			if (r.getActividad().equalsIgnoreCase("comentario")) {
-				auxLista.add(r);
-			}
-		}
-		
-		return auxLista;
 	}
 
 	public void delete(int id) throws Exception {

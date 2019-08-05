@@ -71,13 +71,15 @@
 						</div>
 					</div>
 
+					<!-- Fecha que no vale -->
 					<div class="form-group">
-						<h:outputLabel for="fechaInicio" class="control-label col-sm-4">Fecha Inicio</h:outputLabel>
-						<div class="col-sm-4">
-						
-						<p:calendar id="popup" value="#{eventoBean.newEvento.fecha}" showOn="button"  />
-         
-							
+						<h:outputLabel for="fechaInicio" class="col-sm-2 control-label">Fecha Inicio</h:outputLabel>
+						<div class="col-sm-10">
+							<p:calendar id="fechaInicio"
+								value="#{eventoBean.newEvento.fecha}" class="form-control"
+								validatorMessage="La fecha de inicio es obligatoria"
+								showOn="button" style="display: contents;">
+							</p:calendar>
 							<h:message for="fechaInicio" />
 						</div>
 					</div>

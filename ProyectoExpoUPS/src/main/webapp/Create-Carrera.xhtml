@@ -13,7 +13,7 @@
 
 <ui:composition template="blank.xhtml">
 	<ui:define name="titulo">
-		<h2>Manejo de Vehículos</h2>
+		<h2>Manejo de Carreras</h2>
 	</ui:define>
 
 	<ui:define name="contenido">
@@ -22,9 +22,10 @@
 			<h:form class="form-horizontal">
 				<!-- Inicio /.box-body -->
 				<div class="box-body">
-				
-				<div class="form-group">
-						<label for="inputEmail3" class="col-sm-2 control-label">Seleccionar Dueño</label>
+
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Seleccionar
+							Universidad</label>
 						<div class="col-sm-10">
 							<h:selectOneMenu value="#{carreraBean.idUniversidad}" id="pb"
 								class="form-control">
@@ -45,8 +46,8 @@
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">Nombre</label>
 						<div class="col-sm-10">
-							<h:inputText value="#{carreraBean.newCarrera.nombre}" id="txtNombre"
-								class="form-control" />
+							<h:inputText value="#{carreraBean.newCarrera.nombre}"
+								id="txtNombre" class="form-control" />
 							<h:message for="txtNombre" />
 						</div>
 					</div>
@@ -54,8 +55,8 @@
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">Título</label>
 						<div class="col-sm-10">
-							<h:inputText value="#{carreraBean.newCarrera.titulo}" id="txtTitulo"
-								class="form-control" />
+							<h:inputText value="#{carreraBean.newCarrera.titulo}"
+								id="txtTitulo" class="form-control" />
 							<h:message for="txtTitulo" />
 						</div>
 					</div>
@@ -63,8 +64,8 @@
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">Descripción</label>
 						<div class="col-sm-10">
-							<h:inputText value="#{carreraBean.newCarrera.descripcion}" id="txtDescripcion"
-								class="form-control" />
+							<h:inputText value="#{carreraBean.newCarrera.descripcion}"
+								id="txtDescripcion" class="form-control" />
 							<h:message for="txtDescripcion" />
 						</div>
 					</div>
@@ -102,8 +103,8 @@
 
 				<div class="box-body pad">
 
-					<h:dataTable var="_carrera" value="#{carreraBean.carreras}" border="1"
-						class="table table-bordered text-center">
+					<h:dataTable var="_carrera" value="#{carreraBean.carreras}"
+						border="1" class="table table-bordered text-center">
 
 						<h:column>
 							<f:facet name="header">Codigo</f:facet>

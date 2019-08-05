@@ -1,18 +1,31 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:p="http://primefaces.org/ui">
-     
-    <h:head>
-    </h:head>
- 
-    <h:body>
-    
-	    <h:form>
-	    	 <p:spinner />
-	    	  <p:calendar id="popup" value="#{testBean.date2}" />
-       
-	    </h:form>
-	       
-    </h:body>
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+</h:head>
+
+<h:body>
+
+	<h:form>
+		<p:spinner />
+		<p:calendar id="popup" value="#{testBean.date2}" />
+
+
+		<div class="form-group">
+			<h:outputLabel for="fechaInicio" class="control-label col-sm-4">Fecha Inicio</h:outputLabel>
+			<div class="col-sm-4">
+				<p:calendar id="fechaInicio"
+					value="#{testBean.date2}" class="form-control"
+					validatorMessage="La fecha de inicio es obligatoria"
+					showOn="button" style="display: contents;">
+				</p:calendar>
+				<h:message for="fechaInicio" />
+			</div>
+		</div>
+
+	</h:form>
+
+</h:body>
 </html>

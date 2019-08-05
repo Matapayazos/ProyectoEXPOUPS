@@ -16,15 +16,12 @@ import ec.edu.ups.model.Carrera;
 import ec.edu.ups.model.Evento;
 import ec.edu.ups.model.Evento;
 import ec.edu.ups.model.Evento;
-import ec.edu.ups.model.RegistroApp;
+
 
 @Stateless
 public class EventoBussiness {
 	@Inject
 	private EventoDAO dao;
-
-	@Inject
-	private RegistroAppBussiness registroAppBussiness;
 
 	public boolean save(Evento evento) throws Exception {
 		Evento aux = dao.read(evento.getId());

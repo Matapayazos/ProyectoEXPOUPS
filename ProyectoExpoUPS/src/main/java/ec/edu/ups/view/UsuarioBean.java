@@ -73,7 +73,7 @@ public class UsuarioBean implements Serializable {
 		if (val) {
 			HttpSession session = SessionUtils.getSession();
 			session.setAttribute("username", newUsuario.getUsuario());
-			return "Create-Universidad?faces-redirect=true";
+			return "Create-Carrera?faces-redirect=true";
 		} else {
 			return "Error?faces-redirect=true";
 		}

@@ -16,15 +16,12 @@ import ec.edu.ups.model.Carrera;
 import ec.edu.ups.model.Universidad;
 import ec.edu.ups.model.Universidad;
 import ec.edu.ups.model.Universidad;
-import ec.edu.ups.model.RegistroApp;
+
 
 @Stateless
 public class UniversidadBussiness {
 	@Inject
 	private UniversidadDAO dao;
-	
-	@Inject
-	private RegistroAppBussiness registroAppBussiness;
 	
 	
 	public Universidad getPropietarioCarrera(String idCarrera){

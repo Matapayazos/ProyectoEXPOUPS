@@ -16,15 +16,11 @@ import ec.edu.ups.model.Carrera;
 import ec.edu.ups.model.Aspirante;
 import ec.edu.ups.model.Aspirante;
 import ec.edu.ups.model.Aspirante;
-import ec.edu.ups.model.RegistroApp;
 
 @Stateless
 public class AspiranteBussiness {
 	@Inject
 	private AspiranteDAO dao;
-
-	@Inject
-	private RegistroAppBussiness registroAppBussiness;
 
 	public boolean save(Aspirante aspirante) throws Exception {
 		Aspirante aux = dao.read(aspirante.getId());

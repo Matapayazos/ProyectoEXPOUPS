@@ -36,11 +36,23 @@ public class UniversidadBean {
 	@PostConstruct
 	public void init() {
 		newUniversidad = new Universidad();
-		
-
 		editing = false;
 		universidads = reBussines.getUniversidads();
 		id = 0;
+
+		Universidad uniPP = new Universidad();
+		uniPP.setNombre("Universidad Politécnica Salesiana");
+		uniPP.setSede("Cuenca");
+		uniPP.setDireccion("Calle Vieja 12-30 y Elia Liut");
+		uniPP.setTelefono("(+593) 74135250");
+		try {
+			if (universidads.size() == 0) {
+				reBussines.save(uniPP);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 
@@ -67,8 +79,6 @@ public class UniversidadBean {
 	}
 
 	public String guardar() {
-
-
 
 		try {
 			if (editing) {
