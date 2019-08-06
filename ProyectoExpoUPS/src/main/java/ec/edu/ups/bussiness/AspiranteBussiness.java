@@ -23,7 +23,7 @@ public class AspiranteBussiness {
 	private AspiranteDAO dao;
 
 	public boolean save(Aspirante aspirante) throws Exception {
-		Aspirante aux = dao.read(aspirante.getId());
+		Aspirante aux = dao.read(aspirante.getCedula());
 		if (aux != null)
 			throw new Exception("Aspirante ya Registrada");
 		else
@@ -37,17 +37,17 @@ public class AspiranteBussiness {
 		return dao.getAspirantes();
 	}
 
-	public void delete(int id) throws Exception {
-		Aspirante aux = dao.read(id);
+	public void delete(String cedula) throws Exception {
+		Aspirante aux = dao.read(cedula);
 
 		if (aux == null)
 			throw new Exception("registro no existe");
 		else
-			dao.remove(id);
+			dao.remove(cedula);
 	}
 
 	public boolean update(Aspirante aspirante) throws Exception {
-		Aspirante aux = dao.read(aspirante.getId());
+		Aspirante aux = dao.read(aspirante.getCedula());
 		if (aux == null)
 			throw new Exception("Registro no existe en update");
 		else
@@ -56,8 +56,8 @@ public class AspiranteBussiness {
 		return true;
 	}
 
-	public Aspirante getAspirante(int id) throws Exception {
-		Aspirante aux = dao.read(id);
+	public Aspirante getAspirante(String cedula) throws Exception {
+		Aspirante aux = dao.read(cedula);
 		if (aux == null)
 			throw new Exception("Aspirante no existe");
 		else

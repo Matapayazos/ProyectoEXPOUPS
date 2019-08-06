@@ -6,7 +6,7 @@
 
 <h:head>
 	<f:metadata>
-		<f:viewParam id="id" name="id" value="#{aspiranteBean.id}" />
+		<f:viewParam id="id" name="id" value="#{aspiranteBean.cedula}" />
 		<f:viewAction action="#{aspiranteBean.loadData()}" />
 	</f:metadata>
 </h:head>
@@ -29,8 +29,16 @@
 						<label for="inputEmail3" class="col-sm-2 control-label">Datos
 							Aspirante</label>
 						<div class="col-sm-10">
-							<h:inputHidden value="#{aspiranteBean.newAspirante.id}"
-								id="txtcode" />
+							
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Cedula</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{aspiranteBean.newAspirante.cedula}"
+								id="txtCedula" class="form-control" />
+							<h:message for="txtCedula" />
 						</div>
 					</div>
 
@@ -69,6 +77,7 @@
 							<h:message for="txtContrasenia" />
 						</div>
 					</div>
+					<h:messages globalOnly="true" />
 
 
 
@@ -89,13 +98,12 @@
 
 				<div class="box-body pad">
 
-					<h:dataTable var="_aspirante"
-						value="#{aspiranteBean.aspirantes}" border="2"
-						class="table table-bordered text-center">
+					<h:dataTable var="_aspirante" value="#{aspiranteBean.aspirantes}"
+						border="2" class="table table-bordered text-center">
 
 						<h:column>
 							<f:facet name="header">Codigo</f:facet>
-			                #{_aspirante.id}
+			                #{_aspirante.cedula}
 			      		</h:column>
 
 						<h:column>
@@ -106,22 +114,21 @@
 						<h:column>
 							<f:facet name="header">Apellido</f:facet>
 			                #{_aspirante.apellido}
-			      		</h:column>				
+			      		</h:column>
 
 						<h:column>
 							<f:facet name="header">Email</f:facet>
 			               #{_aspirante.email}
 			            </h:column>
-			            
-			            <h:column>
+
+						<h:column>
 							<f:facet name="header">Contraseña</f:facet>
 			               #{_aspirante.contrasenia}
-			            </h:column>					
+			            </h:column>
 
 						<h:column>
 							<f:facet name="header">Acciones</f:facet>
-							<h:commandButton
-								action="#{aspiranteBean.borrar(_aspirante.id)}"
+							<h:commandButton action="#{aspiranteBean.borrar(_aspirante.cedula)}"
 								value="Borrar" immediate="true" class="btn btn-default" />
 							<h:commandButton action="#{aspiranteBean.editar(_aspirante)}"
 								value="Editar" immediate="true" class="btn btn-info pull-right" />

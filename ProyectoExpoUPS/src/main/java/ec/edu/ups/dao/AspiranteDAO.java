@@ -25,13 +25,13 @@ public class AspiranteDAO {
 
 	}
 
-	public void remove(int id) {
-		em.remove(this.read(id));
+	public void remove(String cedula) {
+		em.remove(this.read(cedula));
 
 	}
 
-	public Aspirante read(int id) {
-		Aspirante aspirante = em.find(Aspirante.class, id);
+	public Aspirante read(String cedula) {
+		Aspirante aspirante = em.find(Aspirante.class, cedula);
 		return aspirante;
 	}
 

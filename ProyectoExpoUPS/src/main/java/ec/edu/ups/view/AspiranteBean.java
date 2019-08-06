@@ -27,7 +27,7 @@ public class AspiranteBean {
 
 	private Aspirante newAspirante;
 
-	private int id; // Parametro para edicion
+	private String cedula; // Parametro para edicion
 
 	private boolean editing; // Se utiliza para determinar si se esta editando o creando un nuevo aspirante
 
@@ -40,7 +40,7 @@ public class AspiranteBean {
 
 		editing = false;
 		aspirantes = reBussines.getAspirantes();
-		id = 0;
+		cedula  = "";
 
 	}
 
@@ -48,11 +48,11 @@ public class AspiranteBean {
 
 	public void loadData() {
 		// System.out.println("load data " + id);
-		if (id == 0)
+		if (cedula.equals(""))
 			return;
 
 		try {
-			newAspirante = reBussines.getAspirante(id);
+			newAspirante = reBussines.getAspirante(cedula);
 			editing = true;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -63,7 +63,7 @@ public class AspiranteBean {
 
 	public String editar(Aspirante cli) {
 		editing = true;
-		return "Create-Aspirante?faces-redirect=true&id=" + cli.getId();
+		return "Create-Aspirante?faces-redirect=true&id=" + cli.getCedula();
 	}
 
 	public String guardar() {
@@ -75,6 +75,9 @@ public class AspiranteBean {
 				reBussines.update(newAspirante);
 				System.out.println("Registro Modificado");
 			} else {
+				System.out.println("_______________________");
+				System.out.println("Llego al AspiranteBean > guardar > save > linea78");
+				System.out.println("_______________________");
 				reBussines.save(newAspirante);
 				System.out.println("Registro Guardado");
 			}
@@ -87,10 +90,10 @@ public class AspiranteBean {
 		return null;
 	}
 
-	public String borrar(int id) {
+	public String borrar(String cedula) {
 
 		try {
-			reBussines.delete(id);
+			reBussines.delete(cedula);
 			System.out.println("eliminado");
 			return "Create-Aspirante?faces-redirect=true";
 		} catch (Exception e) {
@@ -137,12 +140,14 @@ public class AspiranteBean {
 		this.aspirantes = aspirantes;
 	}
 
-	public int getId() {
-		return id;
+	
+
+	public String getCedula() {
+		return cedula;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCedula(String cedula) {
+		this.cedula = cedula;
 	}
 
 	public boolean isEditing() {

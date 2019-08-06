@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Manejo Noticias</title>
+	<f:metadata>
+		<f:viewParam id="id" name="id" value="#{noticiaBean.id}" />
+		<f:viewAction action="#{noticiaBean.loadData()}" />
+	</f:metadata>
+</h:head>
+
+
+<ui:composition template="blank.xhtml">
+	<ui:define name="titulo">
+		<h2>Manejo de Noticias</h2>
+	</ui:define>
+
+	<ui:define name="contenido">
+
+		<div class="box box-info">
+			<h:form class="form-horizontal">
+				<!-- Inicio /.box-body -->
+				<div class="box-body">
+
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Seleccionar
+							Carrera</label>
+						<div class="col-sm-10">
+							<h:selectOneMenu value="#{noticiaBean.idCarrera}" id="pb"
+								class="form-control">
+								<f:selectItems value="#{noticiaBean.listaCarrerasCbx}" />
+							</h:selectOneMenu>
+							<h:message for="pb" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputEmail3" class="col-sm-2 control-label">Datos
+							Noticia</label>
+						<div class="col-sm-10">
+							<h:inputHidden value="#{noticiaBean.newNoticia.id}" id="txtcode" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Titulo</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{noticiaBean.newNoticia.titulo}"
+								id="txtTitulo" class="form-control" />
+							<h:message for="txtTitulo" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<h:outputLabel for="fechaNoticia" class="col-sm-2 control-label">Fecha Noticia</h:outputLabel>
+						<div class="col-sm-10">
+							<p:calendar id="fechaNoticia"
+								value="#{noticiaBean.newNoticia.fechaNoticia}"
+								class="form-control"
+								validatorMessage="La fecha de inicio es obligatoria"
+								showOn="button" style="display: contents;">
+							</p:calendar>
+
+							<h:message for="fechaNoticia" />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Descripción</label>
+						<div class="col-sm-10">
+							<h:inputText value="#{noticiaBean.newNoticia.descripcion}"
+								id="txtDescripcion" class="form-control" />
+							<h:message for="txtDescripcion" />
+						</div>
+					</div>
+
+
+				</div>
+
+				<div class="box-footer">
+					<h:inputHidden value="#{noticiaBean.edit}" />
+					<h:commandButton action="#{noticiaBean.guardar()}" value="Guardar"
+						class="btn btn-info pull-right" />
+
+					<h:commandButton action="index?faces-redirect=true" value="Salir"
+						immediate="true" class="btn btn-default" />
+				</div>
+				<!-- /.box-footer -->
+
+				<div class="box-body pad">
+
+					<h:dataTable var="_noticia" value="#{noticiaBean.noticias}"
+						border="1" class="table table-bordered text-center">
+
+						<h:column>
+							<f:facet name="header">Codigo</f:facet>
+				                #{_noticia.id}
+				      	</h:column>
+
+						<h:column>
+							<f:facet name="header">Titulo</f:facet>
+				                #{_noticia.titulo}
+				      	</h:column>
+
+						<h:column>
+							<f:facet name="header">Fecha</f:facet>
+			               #{_noticia.fechaNoticia}
+			            </h:column>
+
+
+						<h:column>
+							<f:facet name="header">Descripción</f:facet>
+				                #{_noticia.descripcion}
+				      	</h:column>
+
+						<h:column>
+							<f:facet name="header">Acciones</f:facet>
+							<h:commandButton action="#{noticiaBean.borrar(_noticia.id)}"
+								value="Borrar" immediate="true" class="btn btn-default" />
+							<h:commandButton action="#{noticiaBean.editar(_noticia)}"
+								value="Editar" immediate="true" class="btn btn-info pull-right" />
+						</h:column>
+
+					</h:dataTable>
+				</div>
+
+			</h:form>
+		</div>
+
+	</ui:define>
+</ui:composition>
+
+</html>

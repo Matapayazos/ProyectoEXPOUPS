@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Registro Curso</title>
+	<h:outputStylesheet name="/css/bootstrap.min.css" />
+</h:head>
+<body background="paralax.jpg">
+	<h:form id="form" class="form-horizontal">
+		<div class="form-group">
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">
+				<h2 style="text-align: center">Curso</h2>
+			</div>
+		</div>
+		<hr />
+
+		<div class="form-group">
+			<h:outputLabel for="fechaInicio" class="control-label col-sm-4">Fecha Inicio</h:outputLabel>
+			<div class="col-sm-4">
+				<p:calendar id="fechaInicio" value="#{eventoBean.newEvento.fecha}"
+					class="form-control"
+					validatorMessage="La fecha de inicio es obligatoria"
+					showOn="button" style="display: contents;">
+				</p:calendar>
+				
+				<h:message for="fechaInicio" />
+			</div>
+		</div>
+
+		<h:messages globalOnly="true" />
+	</h:form>
+</body>
+</html>
