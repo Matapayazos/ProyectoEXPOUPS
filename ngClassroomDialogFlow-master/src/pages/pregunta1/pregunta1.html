@@ -1,0 +1,46 @@
+<!--
+  Generated template for the Pregunta1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>pregunta1</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+   
+<b><p>Termina la frase: "Me gustaría que mi trabajo sirviese para..."</p></b>
+<!-- Checkboxes in a List -->
+
+
+<ion-list>
+  <div class="list">
+    <div class=" item item-divider">
+        Grupo 1
+    </div>
+    <ion-radio ng-model="choice" ng-value="'D'">Elige D</ion-radio>
+    <ion-radio ng-model="choice" ng-value="'E'">Elige E</ion-radio>
+    <ion-radio ng-model="choice" ng-value="'F'">Elige F</ion-radio>
+    <div class=" item item-divider">
+        Grupo 2
+    </div>
+    <ion-radio ng-model="choice" ng-value="'G'">Elige G</ion-radio>
+    <ion-radio ng-model="choice" ng-value="'H'">Elige H</ion-radio>
+    <ion-radio ng-model="choice" ng-value="'I'">Elige I</ion-radio>
+</div>
+
+
+</ion-list>
+<div padding>
+  <button ion-button [navPush]="pregunta2" [navParams]="paramsParaSegPag">
+    Siguiente Pregunta
+  </button>
+ </div> 
+</ion-content>

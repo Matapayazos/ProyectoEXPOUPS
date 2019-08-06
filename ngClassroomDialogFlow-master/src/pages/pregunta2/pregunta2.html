@@ -1,0 +1,41 @@
+<!--
+  Generated template for the Pregunta2Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>pregunta2</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <b><p>Prefieres trabajar…¿solo/a o en equipo?</p></b>
+    <!-- Checkboxes in a List -->
+    
+    
+    <ion-list>
+        <ion-item>
+            <ion-label>Solo/a! </ion-label>
+            <ion-checkbox [(ngModel)]="a" (ionChange)="updatea()"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+          <ion-label>En equipo! </ion-label>
+          <ion-checkbox [(ngModel)]="b" (ionChange)="updateb()"></ion-checkbox>
+    </ion-item>
+  
+    </ion-list>
+    <div padding>
+      <button ion-button [navPush]="pregunta2" [navParams]="paramsParaSegPag">
+        Siguiente Pregunta
+      </button>
+     </div> 
+
+
+    <p>Puntaje: {{unNumeroRecibido}}</p>
+
+</ion-content>

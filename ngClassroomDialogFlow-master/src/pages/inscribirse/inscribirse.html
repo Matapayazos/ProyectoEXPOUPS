@@ -1,0 +1,37 @@
+<!--
+  Generated template for the InscribirsePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Inscripcion</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+  <ion-content padding>
+   <ion-list>
+    <ion-item>
+     <ion-label floating>Nombre</ion-label>
+     <ion-input type="text"  #nombre></ion-input>
+    </ion-item>
+    <ion-item>
+     <ion-label floating>Apellido</ion-label>
+     <ion-input type="text" #apellido></ion-input>
+    </ion-item>
+     <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" #email></ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-label floating>Pasword</ion-label>
+      <ion-input type="password" #password></ion-input>
+     </ion-item>
+   </ion-list>
+  
+   <div padding>
+    <button block ion-button (click)="Resgistrarse()" >Resgistrarse</button>
+   </div> 
+  </ion-content>

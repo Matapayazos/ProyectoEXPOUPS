@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Home</ion-title>
+      <ion-buttons start>
+        <button ion-button menuToggle="leftMenu">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-buttons end>
+        <button ion-button menuToggle="rightMenu">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <p> <ion-datetime displayFormat="MMM DD YYYY" [(ngModel)]="myDate"></ion-datetime></p>
+   
+      <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+      <ion-list>
+          <button  class="button" ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+              <li> {{ item }}</li>
+          </button> 
+       </ion-list>
+  
+       <ion-list >
+        <button ion-item *ngFor="let resultado of resultados" >
+         {{resultado.nombre}} : {{resultado.descripcion}}
+        </button>
+     </ion-list>
+ 
+</ion-content>
