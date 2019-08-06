@@ -34,6 +34,17 @@ public class AspiranteDAO {
 		Aspirante aspirante = em.find(Aspirante.class, cedula);
 		return aspirante;
 	}
+	public Aspirante Login(String email,String password) {
+
+		String jpql = "SELECT c FROM Aspirante c Where c.email= :email AND c.contrasenia= :password ";
+		Query query = em.createQuery(jpql, Aspirante.class);
+		query.setParameter("email", email);
+		query.setParameter("password", password);
+		@SuppressWarnings("unchecked")
+		
+		Aspirante l = (Aspirante)query.getSingleResult();
+		return l;
+	}
 
 	public List<Aspirante> getAspirantes() {
 

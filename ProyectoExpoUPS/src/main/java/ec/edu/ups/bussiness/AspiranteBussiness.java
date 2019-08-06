@@ -64,5 +64,16 @@ public class AspiranteBussiness {
 		else
 			return aux;
 	}
+	public Boolean Login(String email,String password )  {
+		Aspirante aux = dao.Login(email, password);
+		if (aux == null) {
+			return false;
+			
+		}else {
+			return true;
+		}
+			
+
+	}
 	
 }
