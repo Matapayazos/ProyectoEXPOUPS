@@ -9,6 +9,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
+import ec.edu.ups.appdis.jpa.model.Estudiante;
 import ec.edu.ups.dao.AspiranteDAO;
 import ec.edu.ups.dao.AspiranteDAO;
 import ec.edu.ups.dao.AspiranteDAO;
@@ -63,5 +64,5 @@ public class AspiranteBussiness {
 		else
 			return aux;
 	}
-
+	
 }
