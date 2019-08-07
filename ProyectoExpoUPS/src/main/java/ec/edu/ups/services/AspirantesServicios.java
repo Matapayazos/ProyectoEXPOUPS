@@ -25,6 +25,7 @@ public class AspirantesServicios {
 	@POST
 	@Path("/insert")
 	@Produces("application/json")
+	// Insertar aspirante desde la aplicacion, consumiendo el webservice de insertar aspirante
 	public Response insertAspirante(Aspirante aspirante) {
 		Response.ResponseBuilder builder = null;
 		Map<String, String> data = new HashMap<>();
@@ -50,6 +51,7 @@ public class AspirantesServicios {
 	@Path("/Login")
 	@Consumes("application/json")
 	@Produces("application/json")
+	// Logeo del aspirante desde la aplicacion, consumiendo el webservice de logeo
 	public Boolean Login(@QueryParam("email")String email, @QueryParam("password")String password) {
 
 		try {
