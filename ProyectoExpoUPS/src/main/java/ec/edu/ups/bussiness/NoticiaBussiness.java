@@ -18,10 +18,24 @@ import ec.edu.ups.model.Noticia;
 import ec.edu.ups.model.Noticia;
 
 
+/**
+ * Establece las reglas de negocio y las validaciones necesarias para la entidad
+ * Noticia
+ * @author Cancer31
+ *
+ */
 @Stateless
 public class NoticiaBussiness {
 	@Inject
 	private NoticiaDAO dao;
+	
+	/**
+	 * Método para guardar noticias
+	 * @param noticia la nueva noticia a ser guardada
+	 * @return Método para guardar 
+	 * @throws Exception indica que este método es capaz de lanzar una
+	 * Exception del tipo Exception (padre de todas las excepciones).
+	 */
 
 	public boolean save(Noticia noticia) throws Exception {
 		Noticia aux = dao.read(noticia.getId());
@@ -33,11 +47,21 @@ public class NoticiaBussiness {
 		return true;
 	}
 
+	/**
+	 * lista de noticias
+	 * @return retorna una lista de noticias
+	 */
 	public List<Noticia> getNoticias() {
 
 		return dao.getNoticias();
 	}
 
+	/**
+	 * Método para eliminar una noticia 
+	 * @param id id de la noticia de tipo int
+	 * @throws Exception indica que este método es capaz de lanzar una
+	 * Exception del tipo Exception (padre de todas las excepciones).
+	 */
 	public void delete(int id) throws Exception {
 		Noticia aux = dao.read(id);
 
@@ -47,6 +71,13 @@ public class NoticiaBussiness {
 			dao.remove(id);
 	}
 
+	/**
+	 * Método para actualizar noticias
+	 * @param noticia de tipo noticia
+	 * @return retorna true si se ha actualizado corectamente
+	 * @throws Exception indica que este método es capaz de lanzar una
+	 * Exception del tipo Exception (padre de todas las excepciones).
+	 */
 	public boolean update(Noticia noticia) throws Exception {
 		Noticia aux = dao.read(noticia.getId());
 		if (aux == null)
@@ -57,6 +88,13 @@ public class NoticiaBussiness {
 		return true;
 	}
 
+	/**
+	 * Listar noticias
+	 * @param id
+	 * @return
+	 * @throws Exception indica que este método es capaz de lanzar una
+	 * Exception del tipo Exception (padre de todas las excepciones).
+	 */
 	public Noticia getNoticia(int id) throws Exception {
 		Noticia aux = dao.read(id);
 		if (aux == null)
