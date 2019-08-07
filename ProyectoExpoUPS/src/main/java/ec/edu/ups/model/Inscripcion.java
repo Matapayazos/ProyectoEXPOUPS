@@ -13,7 +13,12 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
+/**
+ *  Esta clase define la entidad Inscripcion con todos sus atributos, los cuales
+ * serviran para mapear una tabla en la base de datos
+ * @author Cancer31
+ *
+ */
 @Entity
 public class Inscripcion {
 
