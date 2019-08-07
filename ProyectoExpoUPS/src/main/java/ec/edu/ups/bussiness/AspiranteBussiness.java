@@ -17,7 +17,12 @@ import ec.edu.ups.model.Carrera;
 import ec.edu.ups.model.Aspirante;
 import ec.edu.ups.model.Aspirante;
 import ec.edu.ups.model.Aspirante;
-
+/**
+ * Establece las reglas de negocio y las validaciones necesarias para la entidad
+ * Aspirantes
+ * @author Cancer31
+ *
+ */
 @Stateless
 public class AspiranteBussiness {
 	@Inject
