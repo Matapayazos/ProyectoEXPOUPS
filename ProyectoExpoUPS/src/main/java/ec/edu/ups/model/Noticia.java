@@ -15,7 +15,12 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-
+/**
+ *  Esta clase define la entidad Noticia con todos sus atributos, los cuales
+ * serviran para mapear una tabla en la base de datos
+ * @author Cancer31
+ *
+ */
 @SuppressWarnings("serial")
 @Entity
 public class Noticia implements Serializable {
