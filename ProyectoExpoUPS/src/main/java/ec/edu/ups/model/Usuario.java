@@ -6,7 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
-
+/**
+ *  Esta clase define la entidad Usuario con todos sus atributos, los cuales
+ * serviran para mapear una tabla en la base de datos
+ * @author Cancer31
+ *
+ */
 @SuppressWarnings("serial")
 @Entity
 public class Usuario implements Serializable {
