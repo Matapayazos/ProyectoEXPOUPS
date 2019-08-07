@@ -34,7 +34,7 @@ public class EventoService {
 		String x= fecha.toString();
 		System.out.println("el Valor de la fecha "+ x);
 		try {
-			return eBussiness.getEventoXDIASdelMES(fecha);
+			return eBussiness.getEventosXFecha(fecha);
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("ALgo fallo");

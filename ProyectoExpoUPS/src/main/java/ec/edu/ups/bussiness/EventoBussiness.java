@@ -64,5 +64,10 @@ public class EventoBussiness {
 		else
 			return aux;
 	}
+	public List<Evento> getEventosXFecha(Date fecha) {
+
+		return dao.getEventoXFecha(fecha);
+	}
+	
 
 }

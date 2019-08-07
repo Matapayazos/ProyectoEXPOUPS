@@ -1,5 +1,5 @@
 package ec.edu.ups.dao;
-
+import java.util.Date;
 import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
@@ -39,6 +39,15 @@ public class EventoDAO {
 
 		String jpql = "SELECT c FROM Evento c";
 		Query query = em.createQuery(jpql, Evento.class);
+		@SuppressWarnings("unchecked")
+		List<Evento> listado = query.getResultList();
+		return listado;
+	}
+	public List<Evento> readxFecha(Date fecha) {
+
+		String jpql = "SELECT c FROM Evento c WHERE c.fecha=:fecha";
+		Query query = em.createQuery(jpql, Evento.class);
+		query.setParameter("fecha", fecha);
 		@SuppressWarnings("unchecked")
 		List<Evento> listado = query.getResultList();
 		return listado;
