@@ -8,32 +8,35 @@ import javax.persistence.Query;
 
 import ec.edu.ups.model.Aspirante;
 import ec.edu.ups.model.Aspirante;
-
-@Stateless
-public class AspiranteDAO {
-
-	@Inject
-	private EntityManager em;
-
-	public void insert(Aspirante aspirante) {
-		em.persist(aspirante);
-
-	}
-
-	public void update(Aspirante aspirante) {
+spirante aspirante) {
 		em.merge(aspirante);
 
 	}
 
+	/**
+	 * 
+	 * @param cedula
+	 */
 	public void remove(String cedula) {
 		em.remove(this.read(cedula));
 
 	}
 
+	/**
+	 * lasita aspirante por cedula
+	 * @param cedula cedula del aspirante
+	 * @return retoena un aspirante 
+	 */
 	public Aspirante read(String cedula) {
 		Aspirante aspirante = em.find(Aspirante.class, cedula);
 		return aspirante;
 	}
+	/**
+	 * Logue de los aspirantes
+	 * @param email correo electronico del aspirante
+	 * @param password contrasenia del aspirante
+	 * @return
+	 */
 	public Aspirante Login(String email,String password) {
 
 		String jpql = "SELECT c FROM Aspirante c Where c.email= :email AND c.contrasenia= :password ";
@@ -46,6 +49,10 @@ public class AspiranteDAO {
 		return l;
 	}
 
+	/**
+	 * lista de aspirantes
+	 * @return retonea una lista de aspirantes
+	 */
 	public List<Aspirante> getAspirantes() {
 
 		String jpql = "SELECT c FROM Aspirante c";
