@@ -27,6 +27,15 @@ import ec.edu.ups.model.Aspirante;
 public class AspiranteBussiness {
 	@Inject
 	private AspiranteDAO dao;
+	
+	/**
+	 * Método para guarda Aspirantes 
+	 * @param aspirante el nuevo aspirante a ser guardado 
+	 * de tipo Aspirante
+	 * @return retorna true si se ha agregado corectamente un aspirante
+	 * @throws Exception indica que este método es capaz de lanzar una
+	 * Exception del tipo Exception (padre de todas las excepciones).
+	 */
 
 	public boolean save(Aspirante aspirante) throws Exception {
 		Aspirante aux = dao.read(aspirante.getCedula());
@@ -37,11 +46,22 @@ public class AspiranteBussiness {
 
 		return true;
 	}
+	
+	/**
+	 * Lista de Aspirantes
+	 * @return Retorna una lista de Aspirantes
+	 */
 
 	public List<Aspirante> getAspirantes() {
 
 		return dao.getAspirantes();
 	}
+	/**
+	 * Método para eliminar un aspirante por medio de su cedula
+	 * @param cedula cedula del aspirante de tipo String 
+	 * @throws Exception indica que este método es capaz de lanzar una
+	 * Exception del tipo Exception (padre de todas las excepciones).
+	 */
 
 	public void delete(String cedula) throws Exception {
 		Aspirante aux = dao.read(cedula);
@@ -51,6 +71,13 @@ public class AspiranteBussiness {
 		else
 			dao.remove(cedula);
 	}
+	/**
+	 * Método para actualizar los aspirantes
+	 * @param aspirante aspirante de tipo aspirante
+	 * @return retorna true si se ha actualizado corectamente un aspirante
+	 * @throws Exception indica que este método es capaz de lanzar una
+	 * Exception del tipo Exception (padre de todas las excepciones).
+	 */
 
 	public boolean update(Aspirante aspirante) throws Exception {
 		Aspirante aux = dao.read(aspirante.getCedula());
