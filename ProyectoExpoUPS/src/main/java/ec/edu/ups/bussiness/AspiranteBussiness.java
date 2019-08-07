@@ -88,6 +88,12 @@ public class AspiranteBussiness {
 
 		return true;
 	}
+	/**
+	 * Metodo para listar aspirantes 
+	 * @param cedula
+	 * @return
+	 * @throws Exception
+	 */
 
 	public Aspirante getAspirante(String cedula) throws Exception {
 		Aspirante aux = dao.read(cedula);
@@ -96,6 +102,14 @@ public class AspiranteBussiness {
 		else
 			return aux;
 	}
+	/**
+	 * Metodo para logueo del aspirante 
+	 * @param email correo electrónico correspondiente al aspirante  
+	 * de tipo string
+	 * @param password contrasenia del aspirnate de tipo string 
+	 * @return retorna true si la contraselnia y correo son correctos 
+	 * caso contrario retorna un false
+	 */
 	public Boolean Login(String email,String password )  {
 		Aspirante aux = dao.Login(email, password);
 		if (aux == null) {
