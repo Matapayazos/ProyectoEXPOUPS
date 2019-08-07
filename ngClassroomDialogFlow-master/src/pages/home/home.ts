@@ -10,7 +10,9 @@ ApiAiConstants.DEFAULT_CLIENT_LANG = ApiAiConstants.AVAILABLE_LANGUAGES.EN; //Aq
 export class HomePage {
 
   @ViewChild(Content) content: Content;
-
+  /**
+   * Clase encargada del chatbot
+   */
   client;
   accessToken = '5a72253a28f84ad682aba460ae430d86'; //esta es la llave que nos otroga DialogFlow
 

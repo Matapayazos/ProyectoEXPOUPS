@@ -19,7 +19,7 @@ import { WelcomePage } from '../welcome/welcome';
 })
 export class InscribirsePage {
   [x: string]: any;
-  @ViewChild('nombre') nombre;
+  @ViewChild('nombre') nombre; //parametro del estudiante
  @ViewChild('apellido') apellido;
   @ViewChild('email') email;
  @ViewChild('password') password;

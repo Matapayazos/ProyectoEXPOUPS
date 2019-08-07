@@ -20,10 +20,8 @@ export class WelcomePage  {
   nombre :string =" ";
   items
   resultados: string[];
-  myDate: String = new Date().toISOString();
-  //dia:number =new Date().getDay();
-  //Mes:number =new Date().getMonth();
-  //YEAR:number =new Date().getFullYear();
+  myDate: String = new Date().toISOString();//fecha que se va a registrar en el sistema
+ 
   constructor(public navCtrl: NavController, public navParams: NavParams,public http:HttpClient) {
     this.initializeItems();
   }
@@ -31,7 +29,10 @@ export class WelcomePage  {
   ionViewDidLoad() {
     console.log('ionViewDidLoad WelcomePage'); 
   }
-
+/**
+ * Metodo encargado en obtener los eventos d euna fecha especifica mediante un web service 
+ * @param item 
+ */
   public itemSelected (item: string){
     
     //Falta dar formato para que se listen los eventos :(
@@ -51,6 +52,10 @@ export class WelcomePage  {
   initializeItems() {
     this.items = ["Cultural", "Social","Educativo","Varios","Extras" ];
   }
+  /**
+   * Metodo encargado en la barra de busqueda entre las diferentes categorias existentes
+   * @param ev 
+   */
   getItems(ev) {
     // Reset items back to all of the items
     this.initializeItems();

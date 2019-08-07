@@ -27,7 +27,10 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-
+  /**
+   * Metodo que se encarga de conectar con el web services permitiendo la validacion del Login 
+   * recibe como parametros el emial y la contraseña 
+   */
   login(){
     return new Promise(resolve =>{
       this.http.get('http://localhost:8080/FinalEXPO/rest/Aspiranteservicios/Login?email='+this.email.value+'&password='+this.password.value).subscribe(data=>{
@@ -41,19 +44,23 @@ export class LoginPage {
              });
             alert.present(); 
         }else if(data+" "=='true ') {
-          console.log("paso");
-          this.navCtrl.push(WelcomePage);
-          this.navCtrl.setRoot(WelcomePage);
-          this.navCtrl.canGoBack();
-          this.navCtrl.canSwipeBack();
+          console.log("paso");//validacion de entrada al metodo
+          this.navCtrl.push(WelcomePage);//navegacion entre paginas 
+          this.navCtrl.setRoot(WelcomePage);//vuelve a la nueva pagian como principal 
+          this.navCtrl.canGoBack();//metodo que no permite ir  la vista anterior 
+          this.navCtrl.canSwipeBack();//metodo que no permite ir atras 
         }
       },erro=>{
       });
     });
    }
+   /**
+    * Metodo que lleva a la pantalla de registro 
+    * 
+    */
    Registrar(){
-    console.log("Se mueve de pagina ");
-     this.navCtrl.push(InscribirsePage);
+    console.log("Se mueve de pagina ");//imprime una validacion para saber q entro al metodo
+     this.navCtrl.push(InscribirsePage);//metodo que permite navigar entre las ventanas 
    }
 
 }
