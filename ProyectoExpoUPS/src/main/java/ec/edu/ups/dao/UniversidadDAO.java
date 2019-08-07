@@ -11,7 +11,7 @@ import ec.edu.ups.model.Universidad;
 
 /**
  * Etidad que permite realizar todas las operaciones de mantenimiento (C.R.U.D)
- * sobre la entidad  Aspirante 
+ * sobre la entidad Universidad 
  * @author Cancer31
  *
  */
