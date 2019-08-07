@@ -19,7 +19,12 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ *  Esta clase define la entidad Carrera con todos sus atributos, los cuales
+ * serviran para mapear una tabla en la base de datos
+ * @author Cancer31
+ *
+ */
 @SuppressWarnings("serial")
 @Entity
 public class Carrera implements Serializable {
